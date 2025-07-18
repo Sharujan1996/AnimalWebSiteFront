@@ -1,0 +1,34 @@
+<div class="filtre-container">
+    <div class="filtre-row">
+        <select class="filtre-select">
+            <option value="">Espèce</option>
+            <option *ngFor="let espece of data.nom_especes" [value]="espece">{{ espece }}</option>
+        </select>
+
+        <select class="filtre-select">
+            <option value="">Habitat</option>
+            <option *ngFor="let habitat of data.nom_habitats" [value]="habitat">{{ habitat }}</option>
+        </select>
+
+        <select class="filtre-select">
+            <option value="">Famille</option>
+            <option *ngFor="let famille of data.nom_familles" [value]="famille">{{ famille }}</option>
+        </select>
+    </div>
+
+    <div class="filtre-row">
+        <select class="filtre-select">
+            <option value="">Continent</option>
+            <option *ngFor="let continent of data.nom_continents" [value]="continent">{{ continent }}</option>
+        </select>
+
+        <select class="filtre-select">
+            <option value="">Régime alimentaire</option>
+            <option *ngFor="let regime of data.regimeAlimentaire" [value]="regime">{{ regime }}</option>
+        </select>
+
+        <button class="filtrer-btn" (click)="filtrer()">
+            <i class="fas fa-filter"></i>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="resetPassword()">
+    <label for="email">Email :</label>
+    <input type="email" name="email" formControlName="email">
+    <label for="motDePasse">Nouveau mot de passe :</label>
+    <input type="password" formControlName="motDePasse" name="motDePasse">
+    <label for="confirmationMotDePasse">Confirmer le mot de passe :</label>
+    <input type="password" formControlName="confirmationMotDePasse" name="confirmationMotDePasse">
+    <button type="submit" [disabled]="form.invalid">Réinitialiser</button>
+</form>

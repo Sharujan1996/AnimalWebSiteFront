@@ -1,0 +1,50 @@
+<header class="header" [@fadeSlideIn]>
+    <!-- Logo -->
+    <div class="logo" title="Logo" tabindex="0">
+        <img src="assets/images/titre animalia avec un logo lion dauphin et aigle.png" alt="Logo" />
+    </div>
+
+    <!-- Menu horizontal -->
+    <nav class="menu-horizontal" aria-label="Menu principal">
+        <a href="#" tabindex="0" (mouseenter)="setHover('accueil', 'hover')" [routerLink]="['/accueil']"
+            (mouseleave)="setHover('accueil', 'normal')" [@colorChange]="menuStates['accueil']">
+            Accueil
+            <span class="underline" [@underlineAnim]="menuStates['accueil']"></span>
+        </a>
+        <a href="#" tabindex="0" (mouseenter)="setHover('recherche', 'hover')" [routerLink]="['/recherche']"
+            (mouseleave)="setHover('recherche', 'normal')" [@colorChange]="menuStates['recherche']">
+            Recherche Animal
+            <span class="underline" [@underlineAnim]="menuStates['recherche']"></span>
+        </a>
+        <a href="#" tabindex="0" (mouseenter)="setHover('commande', 'hover')" [routerLink]="['/commande']"
+            (mouseleave)="setHover('commande', 'normal')" [@colorChange]="menuStates['commande']">
+            Commande
+            <span class="underline" [@underlineAnim]="menuStates['commande']"></span>
+        </a>
+        <a href="#" tabindex="0" (mouseenter)="setHover('messagerie', 'hover')" [routerLink]="['/messagerie']"
+            (mouseleave)="setHover('messagerie', 'normal')" [@colorChange]="menuStates['messagerie']">
+            Messagerie
+            <span class="underline" [@underlineAnim]="menuStates['messagerie']"></span>
+        </a>
+        <a href="#" tabindex="0" (mouseenter)="setHover('profil', 'hover')" [routerLink]="['/profil']"
+            (mouseleave)="setHover('profil', 'normal')" [@colorChange]="menuStates['profil']">
+            Profil
+            <span class="underline" [@underlineAnim]="menuStates['profil']"></span>
+        </a>
+    </nav>
+
+    <!-- User name -->
+    <div class="user-name">{{ nomComplet }}</div>
+
+    <!-- Logout -->
+    <button (click)="deconnexion()" [@buttonAnim] class="logout-btn" (mouseenter)="hover = true"
+        (mouseleave)="hover = false">
+        Déconnexion
+    </button>
+
+    <!-- Panier -->
+    <div class="cart" [routerLink]="['/panier']" title="Panier" tabindex="0" aria-label="Voir le panier">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count">{{ 3 }}</span>
+    </div>
+</header>

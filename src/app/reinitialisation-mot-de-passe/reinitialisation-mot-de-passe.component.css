@@ -1,0 +1,83 @@
+/* Formulaire de réinitialisation du mot de passe */
+form {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Label des champs de formulaire */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Champs de saisie */
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Champ de saisie avec erreur */
+input[type="password"].ng-touched.ng-invalid,
+input[type="email"].ng-touched.ng-invalid {
+    border-color: #e74c3c;
+    background-color: #fdecea;
+}
+
+/* Message d'erreur (si nécessaire) */
+input[type="password"].ng-touched.ng-invalid+.error-message,
+input[type="email"].ng-touched.ng-invalid+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Bouton de soumission */
+button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Bouton désactivé */
+button[type="submit"]:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Bouton au survol */
+button[type="submit"]:not(:disabled):hover {
+    background-color: #2980b9;
+}
+
+/* Container global pour la gestion des erreurs */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Conteneur du formulaire avec un petit espace entre les éléments */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

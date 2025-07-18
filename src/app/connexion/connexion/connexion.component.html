@@ -1,0 +1,35 @@
+<html>
+
+<body class="background-tenor">
+    <div class="form-wrapper">
+        <form [formGroup]="form" (submit)="connexion()">
+            <h1> Connexion </h1>
+            <label for="email"> Email : </label>
+            <input type="email" formControlName="email" name="email" placeholder="e@gmail.com" />
+
+            <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+                <small *ngIf="form.get('email')?.errors?.['required']"> Email requis </small>
+                <small *ngIf="form.get('email')?.errors?.['email']">Format email incorrect</small>
+            </div>
+
+            <label for="motDePasse"> Mot de Passe : </label>
+            <input type="password" formControlName="motDePasse" name="motDePasse" />
+
+            <div *ngIf="form.get('motDePasse')?.touched && form.get('motDePasse')?.invalid">
+                <small *ngIf="form.get('motDePasse')?.errors?.['required']">Mot de passe requis.</small>
+                <small *ngIf="form.get('motDePasse')?.errors?.['minlength']">Au moins 8 caractères.</small>
+                <small *ngIf="form.get('motDePasse')?.errors?.['pattern']">
+                    Doit contenir une majuscule, une minuscule et un chiffre.
+                </small>
+            </div>
+
+            <br><button type="submit" [disabled]="form.invalid"> Se connecter </button>
+            <button [routerLink]="['/inscription']"> Inscription </button>
+            <p>Mot de passe oublié ? <a routerLink="/reset-password">Réinitialiser mon mot de passe</a></p>
+        </form>
+
+    </div>
+</body>
+
+
+</html>

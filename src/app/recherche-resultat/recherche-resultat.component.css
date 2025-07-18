@@ -1,0 +1,174 @@
+/* Fond général doux */
+body {
+    background: linear-gradient(135deg, #e0f2f1, #fffde7);
+    /* vert d'eau clair vers beige doux */
+    margin: 0;
+    padding: 2rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Carte principale */
+.animal-card {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background-color: #ffffffdd;
+    /* blanc semi-transparent */
+    backdrop-filter: saturate(180%) blur(12px);
+}
+
+/* En-tête */
+.header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+animal-photo {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.animal-photo {
+    width: 100%;
+    max-width: 400px;
+    /* ou ce que tu veux */
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.animal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Important : remplissage sans déformation */
+    border-radius: 10px;
+    display: block;
+}
+
+.animal-name {
+    font-size: 2.8rem;
+    margin: 0;
+    color: #2e7d32;
+    /* vert foncé */
+    font-weight: 700;
+}
+
+.latin-name {
+    font-size: 1.1rem;
+    color: #6d6d6d;
+    font-style: italic;
+    margin-top: 0.3rem;
+}
+
+/* Description (bloc beige clair) */
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    background-color: #f9f7f1;
+    /* beige clair */
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    color: #5a4d3f;
+    /* brun doux */
+    box-shadow: inset 0 0 10px #e0d9c6;
+}
+
+/* Attributs (bloc vert clair) */
+.attributes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #3a5a40;
+    /* vert foncé */
+    background-color: #e6f0e9;
+    /* vert très clair */
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: inset 0 0 8px #c5d5c5;
+}
+
+/* Famille (bloc vert olive) */
+.family {
+    background-color: #c8d6c8;
+    /* vert olive doux */
+    padding: 1.3rem 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0 1.8rem 0;
+    box-shadow: inset 0 0 10px #a0b39a;
+    font-size: 1rem;
+    color: #385630;
+    /* vert très foncé */
+}
+
+/* Section habitats (fond bleu clair doux) */
+.habitats-section {
+    margin-top: 2rem;
+    background-color: #d8eafc;
+    /* bleu pastel */
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 84, 166, 0.15);
+}
+
+/* Liste habitats flex */
+.habitats-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Chaque habitat (bloc blanc avec ombre légère) */
+.habitat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #ffffff;
+    padding: 0.7rem 1.3rem;
+    border-radius: 12px;
+    flex: 1 1 40%;
+    min-width: 220px;
+    box-shadow: 0 2px 8px rgba(141, 196, 112, 0.25);
+    transition: background-color 0.3s ease;
+}
+
+.habitat:hover {
+    background-color: #f0f7f1;
+}
+
+/* Icones (on peut mettre une couleur verte douce) */
+.icon {
+    font-size: 2.4rem;
+    user-select: none;
+    color: #4caf50;
+}
+
+/* Nom habitat */
+.habitat-name {
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.15rem;
+    color: #33691e;
+    /* vert plus foncé */
+}
+
+/* Continent */
+.continent-name {
+    font-size: 0.9rem;
+    color: #688a1e;
+    margin: 0;
+}

@@ -1,0 +1,216 @@
+form {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem 3rem;
+    background: #f9f6f1;
+    /* beige très clair */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(101, 67, 33, 0.2);
+    /* ombre marron douce */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3a3a2e;
+    /* vert forêt foncé */
+}
+
+form h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: #405d27;
+    /* vert foncé */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem;
+}
+
+.form-row label {
+    width: 140px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #405d27;
+    /* vert forêt */
+    user-select: none;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="phone"] {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 2px solid #a67c52;
+    /* marron bois */
+    border-radius: 8px;
+    background-color: #fffef8;
+    color: #3a3a2e;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.form-row input:focus {
+    border-color: #8fb339;
+    /* vert clair */
+    outline: none;
+    box-shadow: 0 0 10px rgba(143, 179, 57, 0.6);
+}
+
+.form-row input[readonly] {
+    background-color: #eae6db;
+    color: #7a715f;
+    cursor: not-allowed;
+    border-color: #c8c1b6;
+    box-shadow: none;
+}
+
+.age-info {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #3a3a2e;
+    margin: 0;
+    flex: 1;
+}
+
+fieldset {
+    margin-left: 140px;
+    margin-bottom: 2rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+fieldset legend {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #3a3a2e;
+    user-select: none;
+    margin-right: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+fieldset label {
+    font-weight: 600;
+    color: #6a7b3d;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+fieldset label:hover {
+    color: #8fb339;
+}
+
+fieldset input[type="radio"] {
+    accent-color: #8fb339;
+    cursor: pointer;
+}
+
+.form-error {
+    margin-left: 140px;
+    margin-top: -1.2rem;
+    margin-bottom: 1rem;
+}
+
+.form-error small {
+    color: #b53737;
+    /* rouge doux */
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+button[type="submit"],
+button[type="button"] {
+    padding: 14px 34px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+    user-select: none;
+    box-shadow: 0 5px 12px rgba(101, 67, 33, 0.2);
+    font-family: 'Georgia', serif;
+}
+
+button[type="submit"] {
+    background-color: #8fb339;
+    /* vert clair */
+    color: white;
+}
+
+button[type="submit"]:hover:enabled {
+    background-color: #6a8a27;
+    transform: scale(1.05);
+}
+
+button[type="submit"]:disabled {
+    background-color: #c4d393;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+button[type="button"] {
+    background-color: #a67c52;
+    /* marron bois */
+    color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #825f38;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-row label,
+    .form-error,
+    fieldset {
+        margin-left: 0;
+    }
+
+    .age-info {
+        margin-left: 0;
+    }
+
+    fieldset {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    button[type="submit"] {
+        margin-right: 0;
+    }
+}

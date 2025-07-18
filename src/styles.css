@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --facebook-color: #1877F2;
+    --instagram-color: #E4405F;
+    --twitter-color: #1DA1F2;
+}
+
+.social-icons a[aria-label="Facebook"] i {
+    color: var(--facebook-color);
+}
+
+.social-icons a[aria-label="Instagram"] i {
+    color: var(--instagram-color);
+}
+
+.social-icons a[aria-label="Twitter"] i {
+    color: var(--twitter-color);
+}
+
+.social-icons a i {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.85;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2) rotate(-3deg);
+    opacity: 1;
+}

@@ -1,0 +1,62 @@
+<html>
+<div class="background-tenor">
+
+    <body>
+        <form [formGroup]="form" (ngSubmit)="inscription()">
+            <h1>Inscription</h1>
+            <label for="nom">Nom :</label>
+            <input type="text" formControlName="nom" name="nom" />
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" formControlName="prenom" name="prenom" />
+
+            <label for="email">Email :</label>
+            <input type="email" formControlName="email" name="email" placeholder="e@gmail.com" />
+
+            <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+                <small *ngIf="form.get('email')?.errors?.['required']"> Email requis </small>
+                <small *ngIf="form.get('email')?.errors?.['email']">Format email incorrect</small>
+            </div>
+
+            <label for="telephone">Telephone :</label>
+            <input type="tel" formControlName="telephone" name="telephone" placeholder="06 12 34 56 78" />
+
+            <div *ngIf="form.get('telephone')?.touched && form.get('telephone')?.invalid">
+                <small *ngIf="form.get('telephone')?.errors?.['required']">Requis</small>
+                <small *ngIf="form.get('telephone')?.errors?.['pattern']">Format invalide (ex: 06 12 34 56 78)</small>
+            </div>
+
+            <label for="motDePasse">Mot de Passe :</label>
+            <input type="password" formControlName="motDePasse" name="motDePasse" />
+
+            <div *ngIf="form.get('motDePasse')?.touched && form.get('motDePasse')?.invalid">
+                <small *ngIf="form.get('motDePasse')?.errors?.['required']">Mot de passe requis.</small>
+                <small *ngIf="form.get('motDePasse')?.errors?.['minlength']">Au moins 8 caractères.</small>
+                <small *ngIf="form.get('motDePasse')?.errors?.['pattern']">
+                    Doit contenir une majuscule, une minuscule et un chiffre.
+                </small>
+            </div>
+
+            <label for="dateDeNaissance">Date de naissance :</label>
+            <input type="date" id="dateDeNaissance" formControlName="dateDeNaissance">
+
+            <div *ngIf="form.get('dateDeNaissance')?.touched && form.get('dateDeNaissance')?.invalid">
+                <small *ngIf="form.get('dateDeNaissance')?.errors?.['required']">La date est requise.</small>
+            </div>
+
+            <fieldset>
+                <legend>Sexe :</legend>
+                <label><input type="radio" value="M" formControlName="sexe"> M</label>
+                <label><input type="radio" value="F" formControlName="sexe"> F</label>
+            </fieldset>
+            <div *ngIf="form.get('sexe')?.touched && form.get('sexe')?.invalid">
+                <small>Sélectionnez un sexe</small>
+            </div>
+
+            <br><button type="submit" [disabled]="form.invalid"> S'inscrire </button>
+            <button [routerLink]="['/connexion']"> Connexion </button>
+        </form>
+    </body>
+</div>
+
+</html>

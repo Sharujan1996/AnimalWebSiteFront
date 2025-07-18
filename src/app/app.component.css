@@ -1,0 +1,28 @@
+/* S'assurer que le layout prend toute la hauteur de la fenêtre */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal en colonne */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* IMPORTANT : toute la hauteur de la fenêtre */
+}
+
+/* Header et footer ne doivent pas s'étendre */
+app-header,
+app-footer {
+    flex-shrink: 0;
+}
+
+/* Zone centrale qui prend l'espace restant */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+
+}

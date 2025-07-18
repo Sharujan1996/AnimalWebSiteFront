@@ -1,0 +1,5 @@
+<app-recherche-entree (rechercheEffectuee)="rechercheEffectuee($event)"
+    (afficherResultatRecherche)="afficherResultatRecherche($event)"></app-recherche-entree><br>
+<app-recherche-filtre></app-recherche-filtre><br>
+<app-recherche-resultat *ngIf="afficherResultat" [data]="data"></app-recherche-resultat>
+<app-resultat-filtre></app-resultat-filtre>

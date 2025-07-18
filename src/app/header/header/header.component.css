@@ -1,0 +1,182 @@
+/* === HEADER STYLE - Savane & Forêt === */
+
+.header {
+    background-color: #D9C99A;
+    /* couleur sable clair de la savane */
+    color: #264228;
+    /* vert forêt foncé */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 30px;
+    box-shadow: 0 3px 8px rgba(38, 66, 40, 0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    gap: 30px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img,
+.logo:focus img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* === MENU HORIZONTAL === */
+
+.menu-horizontal {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.menu-horizontal a {
+    color: #264228;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    position: relative;
+    outline-offset: 3px;
+    transition: color 0.3s ease;
+}
+
+.menu-horizontal a:hover,
+.menu-horizontal a:focus {
+    color: #A65E2E;
+    /* brun terreux */
+    outline: none;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #A65E2E;
+    border-radius: 2px;
+    width: 0;
+    transition: width 300ms ease-in-out;
+}
+
+.menu-horizontal a:hover .underline,
+.menu-horizontal a:focus .underline {
+    width: 100%;
+}
+
+/* === BOUTON DECONNEXION === */
+
+.logout-btn {
+    background-color: #3E5C3C;
+    /* vert forêt moyen */
+    color: #F1F0E8;
+    /* blanc cassé */
+    padding: 8px 22px;
+    font-weight: 700;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-right: 30px;
+    transition: background-color 0.3s ease;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(62, 92, 60, 0.5);
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+    background-color: #2A3B27;
+    outline: none;
+    box-shadow: 0 0 10px rgba(42, 59, 39, 0.8);
+}
+
+/* === PANIER === */
+
+.cart {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #A65E2E;
+    /* brun terreux */
+    background-color: #F1F0E8;
+    /* blanc cassé pour mieux voir */
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(166, 94, 46, 0.4);
+    outline-offset: 3px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.cart:hover,
+.cart:focus {
+    color: #264228;
+    background-color: #D9C99A;
+    outline: none;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #3E5C3C;
+    color: #F1F0E8;
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    border-radius: 50%;
+    border: 2px solid #D9C99A;
+    user-select: none;
+    box-shadow: 0 0 5px rgba(62, 92, 60, 0.7);
+}
+
+/* === NOM UTILISATEUR === */
+
+.user-name {
+    font-weight: 700;
+    color: #264228;
+    margin-right: 15px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* === RESPONSIVE SIMPLE === */
+
+@media (max-width: 700px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .menu-horizontal {
+        margin-left: 0;
+        gap: 15px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logout-btn {
+        margin-right: 0;
+        order: 4;
+    }
+
+    .cart {
+        order: 2;
+    }
+
+    .user-name {
+        order: 1;
+        width: 100%;
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+}

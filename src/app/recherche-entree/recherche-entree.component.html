@@ -1,0 +1,10 @@
+<div class="recherche-container">
+    <form class="recherche-form" action="#" (ngSubmit)="rechercherAnimal()" method="get">
+        <input type="search" [(ngModel)]="nom" id="nom" name="nom" placeholder="Rechercher un animal"
+            class="form-control" />
+        <button type="submit" class="btn btn-primary">
+            <img src="assets/images/loupe.png" alt="Rechercher" class="search-icon" />
+            Rechercher
+        </button>
+    </form>
+</div>

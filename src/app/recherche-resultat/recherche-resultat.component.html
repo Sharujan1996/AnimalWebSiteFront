@@ -1,0 +1,36 @@
+<div class="animal-card" *ngIf="data">
+    <div class="header">
+        <img [src]="data.photo_url" alt="{{data.nom_animal}}" class="animal-photo" />
+        <h2 class="animal-name">{{ data.nom_animal }}</h2>
+        <p class="latin-name"><em>{{ data.espece.nom_espece }}</em></p>
+    </div>
+
+    <div class="infos">
+        <p class="description">{{ data.description_animal }}</p>
+
+        <div class="attributes">
+            <div><strong>Poids:</strong> {{ data.poids }} kg</div>
+            <div><strong>Taille:</strong> {{ data.taille }} m</div>
+            <div><strong>Espérance de vie:</strong> {{ data.esperance_de_vie }} ans</div>
+            <div><strong>Régime alimentaire:</strong> {{ data.regime_alimentaire }}</div>
+        </div>
+
+        <div class="family">
+            <h3>Famille: {{ data.espece.famille.nom_famille }}</h3>
+            <p>{{ data.espece.famille.description_famille }}</p>
+        </div>
+
+        <div class="habitats-section">
+            <h3>Habitats</h3>
+            <div class="habitats-list">
+                <div class="habitat" *ngFor="let habitat of data.habitats">
+                    <div class="icon">{{ getHabitatIcon(habitat.nom_habitat) }}</div>
+                    <div>
+                        <p class="habitat-name">{{ habitat.nom_habitat }}</p>
+                        <p class="continent-name">{{ habitat.continent.nom_continent }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
